@@ -2,6 +2,7 @@ package com.example.sensores;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 
     public void MontarJson() throws JSONException {
 
@@ -245,9 +247,9 @@ public class MainActivity extends AppCompatActivity {
         endereco = buscarEndereco(latitude, longitude);
 
         Pais     = endereco.getCountryName();
-        Cidade   = endereco.getLocality();
+        Cidade   = endereco.getSubAdminArea();
         Estado   = endereco.getAdminArea();
-        Bairro   = endereco.getSubAdminArea();
+        Bairro   = endereco.getFeatureName();
         Rua      = endereco.getAddressLine(0);
 
         jsonEnvio.put("Pais", Pais);

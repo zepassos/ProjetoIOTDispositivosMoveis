@@ -87,12 +87,7 @@
             android:textColor="#FFFFFF"
             android:textSize="12sp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Inglês"
-            android:onClick="mudarIngles"
-            />
+
 
     </LinearLayout>
 

@@ -70,4 +70,12 @@ public class Sensores extends AppCompatActivity {
 
     }
 
+    public void mudarIngles(View view){
+        AbriTela();
+    }
+
+    private void AbriTela(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
